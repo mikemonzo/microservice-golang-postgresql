@@ -1,4 +1,4 @@
-version: '3,8'
+version: '3.8'
 services:
 # database service for a service
   db-service:
@@ -33,7 +33,7 @@ services:
     env_file:
       - ./pgadmin-service/.env
     ports:
-      - "${PGADMIN__PORT}:${PGADMIN_CONTAINER_PORT}" # Map port between host machine PGADMIN__PORT and container PGADMIN_CONTAINER_PORT. read from .env of compose.
+      - "${PGADMIN_PORT}:${PGADMIN_CONTAINER_PORT}" # Map port between host machine PGADMIN__PORT and container PGADMIN_CONTAINER_PORT. read from .env of compose.
     secrets:
       - db-url
     volumes:
